@@ -3,6 +3,8 @@ obj/
 [Bb]in/
 [Dd]eploy/
 [Dd]ebug/
+Logs/
+App_Data/Log.txt
 *.csproj.user
 *.suo
 *.cache
