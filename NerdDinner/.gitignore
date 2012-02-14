@@ -1,0 +1,9 @@
+obj/
+[Cc]lient[Bb]in/
+[Bb]in/
+[Dd]eploy/
+[Dd]ebug/
+*.csproj.user
+*.suo
+*.cache
+*.xap
