@@ -59,8 +59,10 @@ namespace NerdDinner
         {
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             Application["Version"] = string.Format("{0}.{1}",version.Major,version.Minor);
-            
+            System.Data.Entity.Database.SetInitializer<NerdDinner.Models.NerdDinners>(null);
             RegisterRoutes(RouteTable.Routes);
+            new NerdDinner.Helpers.DatabaseCreator().CreateNerdDinnerDBSchema();
+            new NerdDinner.Helpers.DatabaseCreator().CreateASPNETDBSchema();
         }
 
         void MvcApplication_PostAuthenticateRequest(object sender, EventArgs e)
